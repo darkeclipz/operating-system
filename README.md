@@ -1,20 +1,35 @@
 # Operating System
 
-This is a very basic operating system that has been programmed from scratch. All the references that have been used to create it are list below.
+This is a very basic operating system that has been programmed from scratch. All the references that have been used to create it are listed below.
 
 The goal is to learn more about how a computer works by creating a program that runs without any operating system.
 
 # Tooling
 
-These are some commonly used commonds to either build the kernel, or start the emulation.
+ * Hex editor: a useful hex editor is HxD.
+ * CygWin (for the gcc compiler).
+ * Qemu to emulate the CPU.
+   * Install QEMU from their website. Then go to `C:\Program Files\qemu` and rename `qemu-system-x86_64.exe` to just `qemu.exe`. Also add the `C:\Program Files\qemu` to your environment variables.
+ * nasm
+   * I dumped the files in the Windows directory. 
+
+These are some commonly used commands to either build the kernel, or start the emulation.
+
+**Assemble**
+
+`nasm bootsect.asm -f bin -o bootsect.bin`
+
+**Build kernel**
+
+`some command`
 
 **Start QEMU**
 
-If it is installed for Windows, browse to `C:\Program Files\qemu`. A binary can be start with the following command:
+`qemu my-os.bin`
 
-Cygwin
+**Print binary bytes**
 
-`.\qemnu-system-x86_64.exe -- help`
+`od -t x1 -A n filename`
 
 # References
 
